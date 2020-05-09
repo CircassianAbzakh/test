@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	   <meta charset="utf-8">
-	   <title>Test</title?
-	</head>
-	<body>
-	  <ul>
-		<li>1</li>
-		<li>2</li>
-		<li>3</li>
-	  </ul>
-	</body>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+                function createParagraph() {
+                    let para = document.createElement('p');
+                    para.textContent = 'You clicked the button!';
+                    document.body.appendChild(para);
+                }
+
+                const buttons = document.querySelectorAll('button');
+
+                for (let i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener('click', createParagraph);
+                }
+            });
+            // JavaScript goes here
+    </script>
+</head>
+<body>
+    <input  class="button" type="text" name="button" value="click me" id="button">
+</body>
 </html>
